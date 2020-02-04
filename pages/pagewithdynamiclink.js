@@ -15,18 +15,19 @@ class PageWithDynamicUrl extends Component{
         console.log(this.props.query);
         
         return <Fragment>
-            <NextSeo openGraph={{
-                    type: 'website',    
-                    title: ogData.ogTitle,
-                    description: ogData.ogDescription,
-                    images: [
-                    {
-                        url: ogData.ogImage,
-                        alt: `page with dynamic url ${ogData.ogTitle}`,
-                    }
-                    ],
-                }} />
-                <div>page with dynamic url!</div>
+            {ogData &&  <NextSeo openGraph={{
+                type: 'website',    
+                title: ogData.ogTitle,
+                description: ogData.ogDescription,
+                images: [
+                {
+                    url: ogData.ogImage,
+                    alt: `page with dynamic url ${ogData.ogTitle}`,
+                }
+                ],
+            }} />
+            }
+                        <div>page with dynamic url!</div>
         </Fragment>
       }
     }
