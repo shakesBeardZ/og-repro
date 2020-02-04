@@ -47,7 +47,6 @@ class AppDocument extends Document {
                     <link rel="alternate" href="https://xamber.sa/ar/" hrefLang="ar" />
                     <link rel="author" href="http://plus.google.com/u/0/112961538200891595300" />
                     <meta name="robots" content="noindex,nofollow" />
-                    {this.props.styleTags}
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `window.recaptchaCallback = function() { window.isCaptchaReady = true; }`,
@@ -56,7 +55,7 @@ class AppDocument extends Document {
                     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer />
                     <script dangerouslySetInnerHTML={{ __html: `<!--    BIXET ® | Developing A Lifestyle ™    -->` }} />
                 </Head>
-                <body style={style}>
+                <body>
                     <Main />
                     <NextScript />
                 </body>
