@@ -3,6 +3,7 @@ import React, {Fragment} from 'react';
 import { NextSeo } from 'next-seo';
 
 function NormalPage() {
+    
     return <Fragment>
         <NextSeo openGraph={{
                 type: 'website',    
